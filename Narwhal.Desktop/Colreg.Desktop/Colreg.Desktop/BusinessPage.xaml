@@ -1,0 +1,49 @@
+﻿<mah:MetroWindow x:Class="Colreg.Desktop.BusinessPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Colreg.Desktop"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="Narwhal Desktop" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <RichTextBox Name="richoutput">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="2" Margin="55,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="runButton"  Content="Run" Click="runButton_Click" BorderBrush="#FF69A076" Background="#FF3FCC4E" Margin="-59,0,0,0"/>
+                </Grid>
+                <Button Grid.Column="1" Content="Refresh" Background="CadetBlue" Margin="0,0,5,0" Click="Button_Click"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <DataGrid Name="executablesDataGrid" />
+            </Grid>
+        </Grid>
+
+    </Grid>
+</mah:MetroWindow>

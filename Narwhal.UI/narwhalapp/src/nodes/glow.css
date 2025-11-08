@@ -1,0 +1,17 @@
+.container {
+    
+   
+    animation: glow 2s linear infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                    0 0 40px rgba(0, 255, 255, 0.6),
+                    0 0 60px rgba(0, 255, 255, 0.4),
+                    0 0 80px rgba(0, 255, 255, 0.2);
+    }
+}
